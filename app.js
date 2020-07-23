@@ -33,7 +33,8 @@ fetch("https://pokeapi.co/api/v2/pokemon/lickitung")
     title.classList.add("card-img-top");
     title.style.margin = "15px";
     title.style.marginBottom = "0px";
-    title.style.fontSize = "25px";
+    title.style.fontSize = "18px";
+    title.style.fontWeight = "bold";
     title.style.fontFamily = "Arial";
     
     card.appendChild(title);
@@ -58,10 +59,11 @@ fetch("https://pokeapi.co/api/v2/pokemon/lickitung")
     spriteInfo.style.border = "6px solid yellow";
     spriteInfo.style.marginTop = "0px";
     spriteInfo.style.marginLeft = "15px";
+    spriteInfo.style.paddingLeft = "17%";       //lazy way of doing it
     spriteInfo.style.position = "relative";
     spriteInfo.style.top = "-6px";
     spriteInfo.textContent = "NO. 108  Licking Pokemon  HT: " + height + "  WT: " + weight;
-    spriteInfo.style.fontSize = "10px";
+    spriteInfo.style.fontSize = "7px";
 
     card.appendChild(spriteInfo);
 
@@ -73,13 +75,17 @@ fetch("https://pokeapi.co/api/v2/pokemon/lickitung")
     let content0 = document.createElement("p");
     content0.classList.add("card-text");
     content0.textContent = lick.toUpperCase().slice(0, 1) + lick.slice(1, 9);
+    content0.style.fontSize = "12px";
+    content0.style.fontWeight = "bold";
+    content0.style.marginBottom = "0px";
     cardBody.appendChild(content0);
 
     let content1 = document.createElement("p");
     content1.classList.add("card-text");
     content1.textContent = "Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.";
-    content1.style.fontSize = "15px";
-    //HERE
+    content1.style.fontSize = "8px";
+    content1.style.marginTop = "0px";
+    cardBody.appendChild(content1);
 
     let content2 = document.createElement("p");
     content2.classList.add("card-text");
